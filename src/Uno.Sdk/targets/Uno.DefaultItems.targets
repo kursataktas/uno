@@ -51,4 +51,8 @@
 
 	<!-- Cross Targetting -->
 	<Import Project="Uno.CrossTargeting.targets" />
+
+	<ItemGroup>
+		<None Remove="@(Content);@(Page);@(PRIResource);@(UpToDateCheckInput);@(UnoImage);@(UnoIcon);@(UnoSplashScreen);@(UnoIconBackgroundFile);@(UnoIconForegroundFile);@(UnoSplashScreenFile)" />
+	</ItemGroup>
 </Project>
