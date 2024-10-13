@@ -122,7 +122,7 @@ namespace Microsoft.UI.Xaml.Controls
 		}
 #endif
 
-		private UIElement GetFirstChildNoAddRef() => GetFirstChild();
+		private View GetFirstChildNoAddRef() => GetFirstChild();
 
 		private protected override View GetFirstChild()
 		{
