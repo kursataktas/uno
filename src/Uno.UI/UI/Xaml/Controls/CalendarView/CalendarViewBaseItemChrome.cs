@@ -21,6 +21,16 @@ using DateTime = Windows.Foundation.WindowsFoundationDateTime;
 using Uno.UI.Xaml.Core;
 using Uno.UI.Xaml.Core.Scaling;
 
+#if __ANDROID__
+using View = Android.Views.View;
+#elif __IOS__
+using View = UIKit.UIView;
+#elif __MACOS__
+using View = AppKit.NSView;
+#else
+using View = Microsoft.UI.Xaml.UIElement;
+#endif
+
 namespace Microsoft.UI.Xaml.Controls
 {
 	partial class CalendarViewBaseItem
@@ -114,7 +124,7 @@ namespace Microsoft.UI.Xaml.Controls
 
 		private UIElement GetFirstChildNoAddRef() => GetFirstChild();
 
-		private UIElement GetFirstChild()
+		private protected override View GetFirstChild()
 		{
 			UIElement spFirstChild;
 			// added in UIElement.GetFirstChild()
