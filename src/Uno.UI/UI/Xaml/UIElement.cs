@@ -931,7 +931,6 @@ namespace Microsoft.UI.Xaml
 			InvalidateArrange();
 #endif
 		}
-#endif
 
 		partial void ApplyNativeClip(Rect rect
 #if __SKIA__
